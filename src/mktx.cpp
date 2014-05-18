@@ -174,11 +174,12 @@ bool add_output(transaction_type& tx, const std::string& parameter)
         data_chunk stealth_metadata{{0x06, 0x00, 0x00, 0x00, 0x00}};
         extend_data(stealth_metadata, ephem_pubkey);
         // Add RETURN output.
-        transaction_output_type meta_output;
-        meta_output.value = 0;
-        meta_output.script.push_operation({opcode::return_, data_chunk()});
-        meta_output.script.push_operation({opcode::special, stealth_metadata});
-        tx.outputs.push_back(meta_output);
+        // transaction_output_type meta_output;
+        // meta_output.value = 0;
+        // meta_output.script.push_operation({opcode::return_, data_chunk()});
+        // meta_output.script.push_operation({opcode::special, stealth_metadata});
+        // tx.outputs.push_back(meta_output);
+	std::cout << "ephem_pubkey " << ephem_pubkey << std::endl;
         // Generate the address.
         payment_address payaddr;
         set_public_key(payaddr, addr_pubkey);

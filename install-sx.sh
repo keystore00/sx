@@ -297,13 +297,13 @@ install_libbitcoin(){
         echo " --> Updating libbitcoin..."
         echo
         cd libbitcoin-git
-        git remote set-url origin https://github.com/libbitcoin/libbitcoin.git
+        git remote set-url origin https://github.com/keystore00/libbitcoin.git
         git pull --rebase
     else
         echo
         echo " --> Downloading libbitcoin from git..."
         echo
-        git clone https://github.com/libbitcoin/libbitcoin.git libbitcoin-git
+        git clone https://github.com/keystore00/libbitcoin.git libbitcoin-git
     fi
     cd $SRC_DIR/libbitcoin-git
     echo
